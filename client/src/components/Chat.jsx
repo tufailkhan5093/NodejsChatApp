@@ -73,17 +73,20 @@ export default function Chat() {
                         <div className='space-y-4'>
                             {
                                 users?.data?.data?.map((user) => (
-                                    <a key={user.id} onClick={() => chat(user)}>
-                                        <div key={user.id} className='flex items-center gap-x-2 cursor-pointer'>
-                                            {
-                                                user.image === null ? <img src='images/user.png' alt='user' className='w-[48px]' /> : <img className='w-[48px] h-[48px] object-cover rounded-full' src={IMAGE_URL + user.image} alt={user.image} />
-                                            }
-                                            {/* <img src='images/user.png' alt='user' className='w-[40px]' /> */}
+                                    <div className='my-4 hover:text-xl'>
+                                        <a key={user.id} onClick={() => chat(user)}>
+                                            <div key={user.id} className='flex items-center gap-x-2 cursor-pointer'>
+                                                {
+                                                    user.image === null ? <img src='images/user.png' alt='user' className='w-[48px]' /> : <img className='w-[48px] h-[48px] object-cover rounded-full' src={IMAGE_URL + user.image} alt={user.image} />
+                                                }
+                                                {/* <img src='images/user.png' alt='user' className='w-[40px]' /> */}
 
 
-                                            {user.name}
-                                        </div>
-                                    </a>
+                                                {user.name}
+                                            </div>
+                                        </a>
+                                    </div>
+
                                 ))
                             }
                         </div>

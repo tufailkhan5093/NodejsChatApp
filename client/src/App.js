@@ -18,6 +18,7 @@ function App() {
 <Routes>
   {/* <Route element={<ProtectedRoute user={loginStatus()} />}> */}
     <Route exact path='/' element={<><Home/></>} />
+    {/* <Route exact path='/' element={<><Home/></>} /> */}
     <Route exact path='/signup' element={<><SignUp/></>} />
     <Route exact path='/allusers' element={<><AllUsers/></>} />
     <Route exact path='/chat' element={<><Chat/></>} />
